@@ -28,6 +28,35 @@
             Width = "150"  
             HorizontalAlignment = "Center"  
             Foreground = "DarkBlue"/>
-        
-    </Grid>
+
+
+                <Button x:Name = "button3"  
+            Content = "Prostokat"
+            Click = "przyciskProstokat"  
+            Margin = "10"  
+            Width = "150"
+            HorizontalAlignment = "Center"/>
+                <Button x:Name = "button3_Copy"  
+                    Content = "Wyjdź"
+                    Click = "przyciskWyjdz"  
+                    Margin = "10"  
+                    Width = "150"
+                    HorizontalAlignment = "Center"/>
+
+            </StackPanel>
+
+        </Grid>
+
+        <Canvas Name="MyCanvas"
+        Background="#f2f2f2"
+        Width="937"
+        MouseDown="poczatekRysowania"
+        MouseUp="rysowanieKsztaltu"
+        MouseMove="rysowanieZmianaPozycji"
+        Margin="0,29,0,27"
+        RenderTransformOrigin="0.504,0.505"/>
+
+
+    </DockPanel>
+
 </Window>
