@@ -95,7 +95,49 @@ namespace Projekt__C_Sharp_Paint
                 X2 = koniec.X,
                 Y2 = koniec.Y - 50
             };
+
             MyCanvas.Children.Add(nowaLinia);
+        }
+
+
+        private void RysujKolo()
+        {
+            Ellipse noweKolo = new Ellipse()
+            {
+                Stroke = Brushes.Blue,
+                Fill = Brushes.Yellow,
+                StrokeThickness = 7,
+                Height = 11,
+                Width = 11
+            };
+
+           
+
+            if (koniec.X >= start.X)
+            {
+                
+                noweKolo.SetValue(Canvas.LeftProperty, start.X);
+                noweKolo.Width = koniec.X - start.X;
+            }
+            else
+            {
+                noweKolo.SetValue(Canvas.LeftProperty, koniec.X);
+                noweKolo.Width = start.X - koniec.X;
+            }
+
+            if (koniec.Y >= start.Y)
+            {
+                
+                noweKolo.SetValue(Canvas.TopProperty, start.Y - 50);
+                noweKolo.Height = koniec.Y - start.Y;
+            }
+            else
+            {
+                noweKolo.SetValue(Canvas.TopProperty, koniec.Y - 50);
+                noweKolo.Height = start.Y - koniec.Y;
+            }
+
+            MyCanvas.Children.Add(noweKolo);
         }
     }
 }
