@@ -117,7 +117,6 @@ namespace Projekt__C_Sharp_Paint
                 Width = 11
             };
 
-           
 
             if (koniec.X >= start.X)
             {
@@ -145,5 +144,47 @@ namespace Projekt__C_Sharp_Paint
 
             MyCanvas.Children.Add(noweKolo);
         }
+   private void RysujProstokat()
+        {
+            Rectangle nowyProstokat = new Rectangle()
+            {
+                Stroke = Brushes.Brown,
+                Fill = Brushes.ForestGreen,
+                StrokeThickness = 5
+            };
+ 
+            if (koniec.X >= start.X)
+            {
+                
+                nowyProstokat.SetValue(Canvas.LeftProperty, start.X);
+                nowyProstokat.Width = koniec.X - start.X;
+            }
+            else
+            {
+                nowyProstokat.SetValue(Canvas.LeftProperty, koniec.X);
+                nowyProstokat.Width = start.X - koniec.X;
+            }
+ 
+            if (koniec.Y >= start.Y)
+            {
+               
+                nowyProstokat.SetValue(Canvas.TopProperty, start.Y - 50);
+                nowyProstokat.Height = koniec.Y - start.Y;
+            }
+            else
+            {
+                nowyProstokat.SetValue(Canvas.TopProperty, koniec.Y - 50);
+                nowyProstokat.Height = start.Y - koniec.Y;
+            }
+ 
+            MyCanvas.Children.Add(nowyProstokat);
+        }
+ 
+        private void przyciskWyjdz(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+ 
+       
     }
 }
