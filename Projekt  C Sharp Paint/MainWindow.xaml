@@ -6,7 +6,28 @@
         xmlns:local="clr-namespace:Projekt__C_Sharp_Paint"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+   
+         
+<DockPanel>
+         <Grid>
+
+            <StackPanel Margin = "10">
+
+                <Button x:Name = "button2"  
+            Content = "Linia" 
+            Click="przyciskLinia"
+            Margin = "10"  
+            Width = "150" 
+            HorizontalAlignment = "Center" 
+            Foreground = "DarkBlue"/>
+
+                <Button x:Name = "button23"  
+            Content = "Koło" 
+            Click = "przyciskKolo"  
+            Margin = "10"  
+            Width = "150"  
+            HorizontalAlignment = "Center"  
+            Foreground = "DarkBlue"/>
         
     </Grid>
 </Window>
