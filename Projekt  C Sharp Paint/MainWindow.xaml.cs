@@ -20,6 +20,12 @@ namespace Projekt__C_Sharp_Paint
     /// </summary>
     public partial class MainWindow : Window
     {
+    
+        private enum MyShape
+        {
+            Linia, Kolo, Prostokat
+        }
+        
         public MainWindow()
         {
             InitializeComponent();
