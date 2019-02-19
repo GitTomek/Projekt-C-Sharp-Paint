@@ -26,6 +26,22 @@ namespace Projekt__C_Sharp_Paint
         }
         
         
+        private void przyciskLinia(object sender, RoutedEventArgs e)
+        {
+            ksztalt = MyShape.Linia;
+        }
+ 
+        private void przyciskKolo(object sender, RoutedEventArgs e)
+        {
+            ksztalt = MyShape.Kolo;
+        }
+ 
+        private void przyciskProstokat(object sender, RoutedEventArgs e)
+        {
+            ksztalt = MyShape.Prostokat;
+        }
+        
+        
     Point start;
     Point koniec;
 
