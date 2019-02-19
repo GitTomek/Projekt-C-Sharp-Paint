@@ -24,5 +24,37 @@ namespace Projekt__C_Sharp_Paint
         {
             InitializeComponent();
         }
+        
+        
+    Point start;
+    Point koniec;
+
+    private void poczatekRysowania(object sender, MouseButtonEventArgs e)
+    {
+        
+        start = e.GetPosition(this);
+    }
+
+    private void rysowanieKsztaltu(object sender, MouseButtonEventArgs e)
+    {
+        
+        switch (ksztalt)
+        {
+            case MyShape.Linia:
+                RysujLinie();
+                break;
+
+            case MyShape.Kolo:
+                RysujKolo();
+                break;
+
+            case MyShape.Prostokat:
+                RysujProstokat();
+                break;
+
+            default:
+                return;
+        }
+    }
     }
 }
