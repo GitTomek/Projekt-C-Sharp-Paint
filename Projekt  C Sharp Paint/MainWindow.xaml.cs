@@ -56,5 +56,30 @@ namespace Projekt__C_Sharp_Paint
                 return;
         }
     }
+
+
+
+        private void rysowanieZmianaPozycji(object sender, MouseEventArgs e)
+        {
+            
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                koniec = e.GetPosition(this);
+            }
+        }
+
+        
+        private void RysujLinie()
+        {
+            Line nowaLinia = new Line()
+            {
+                Stroke = Brushes.Black,
+                X1 = start.X,
+                Y1 = start.Y - 50,
+                X2 = koniec.X,
+                Y2 = koniec.Y - 50
+            };
+            MyCanvas.Children.Add(nowaLinia);
+        }
     }
 }
